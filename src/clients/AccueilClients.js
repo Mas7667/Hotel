@@ -1,7 +1,7 @@
 import React from 'react';
 import './AccueilClients.css';
 import { 
-  Waves, Search, Star, Wifi, Car, Coffee, Utensils, ArrowLeft, 
+  Waves, Search, Wifi, Car, Coffee, Utensils, ArrowLeft, 
   MapPin, Phone, Mail 
 } from "lucide-react";
 
@@ -9,22 +9,23 @@ const AccueilClients = () => {
   return (
     <div className="min-vh-100">
       {/* Header */}
-      <header className="header-sticky bg-white shadow-sm">
+      <header className="header-sticky bg-light bg-gradient shadow-sm">
         <div className="container-fluid">
           <div className="row align-items-center py-3">
-            <div className="col-md-6">
+            <div className="col-md-4">
               <div className="d-flex align-items-center gap-3">
+                {/* Button retour */}
                 <button className="btn btn-ghost">
                   <ArrowLeft size={16} className="me-2" />
                   Retour
                 </button>
                 <div className="d-flex align-items-center gap-2">
                   <Waves size={32} className="text-cyan" />
-                  <h1 className="h4 mb-0 text-cyan-dark">Vue Sur Mer</h1>
+                  <h1 className="text-nowrap fs-4 mb-0 text-cyan-dark">Vue Sur Mer</h1>
                 </div>
               </div>
             </div>
-            <div className="col-md-6">
+            <div className="col-md-8">
               <nav className="d-flex justify-content-end gap-2">
                 <button className="btn btn-active">Accueil</button>
                 <button className="btn btn-nav">Nos Chambres</button>
@@ -53,7 +54,7 @@ const AccueilClients = () => {
                 Découvrez le luxe et la sérénité dans notre hôtel face à l'océan. 
                 Chaque chambre offre une vue imprenable sur la mer Méditerranée.
               </p>
-              <button className="btn btn-hero">
+              <button className="btn btn-hero w-50">
                 Réserver maintenant
               </button>
             </div>
@@ -120,13 +121,6 @@ const AccueilClients = () => {
               <div className="room-content">
                 <div className="d-flex justify-content-between align-items-center mb-3">
                   <h4 className="room-title">Chambre Standard</h4>
-                  <div className="room-stars">
-                    <Star size={16} className="star-filled" />
-                    <Star size={16} className="star-filled" />
-                    <Star size={16} className="star-filled" />
-                    <Star size={16} className="star-filled" />
-                    <Star size={16} className="star-empty" />
-                  </div>
                 </div>
                 <p className="room-description">
                   Chambre confortable avec vue partielle sur mer, parfaite pour un séjour relaxant.
@@ -145,7 +139,7 @@ const AccueilClients = () => {
                     <span className="room-price cyan">120€</span>
                     <span className="room-price-unit">/nuit</span>
                   </div>
-                  <button className="btn btn-room cyan">Réserver</button>
+                  <button className="btn btn-room cyan ms-4">Réserver</button>
                 </div>
               </div>
             </div>
@@ -164,13 +158,6 @@ const AccueilClients = () => {
               <div className="room-content">
                 <div className="d-flex justify-content-between align-items-center mb-3">
                   <h4 className="room-title">Chambre Deluxe</h4>
-                  <div className="room-stars">
-                    <Star size={16} className="star-filled" />
-                    <Star size={16} className="star-filled" />
-                    <Star size={16} className="star-filled" />
-                    <Star size={16} className="star-filled" />
-                    <Star size={16} className="star-filled" />
-                  </div>
                 </div>
                 <p className="room-description">
                   Chambre spacieuse avec vue directe sur mer et balcon privé pour des moments inoubliables.
@@ -190,7 +177,7 @@ const AccueilClients = () => {
                     <span className="room-price blue">180€</span>
                     <span className="room-price-unit">/nuit</span>
                   </div>
-                  <button className="btn btn-room blue">Réserver</button>
+                  <button className="btn btn-room blue ms-4">Réserver</button>
                 </div>
               </div>
             </div>
@@ -209,13 +196,6 @@ const AccueilClients = () => {
               <div className="room-content">
                 <div className="d-flex justify-content-between align-items-center mb-3">
                   <h4 className="room-title">Suite Vue Mer</h4>
-                  <div className="room-stars">
-                    <Star size={16} className="star-filled" />
-                    <Star size={16} className="star-filled" />
-                    <Star size={16} className="star-filled" />
-                    <Star size={16} className="star-filled" />
-                    <Star size={16} className="star-filled" />
-                  </div>
                 </div>
                 <p className="room-description">
                   Suite luxueuse avec vue panoramique sur mer, salon séparé et terrasse privée.
@@ -236,7 +216,7 @@ const AccueilClients = () => {
                     <span className="room-price teal">320€</span>
                     <span className="room-price-unit">/nuit</span>
                   </div>
-                  <button className="btn btn-room teal">Réserver</button>
+                  <button className="btn btn-room teal ms-4">Réserver</button>
                 </div>
               </div>
             </div>
