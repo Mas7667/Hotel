@@ -7,6 +7,7 @@ import { Building, Users, Waves, MapPin, Phone, Mail } from "lucide-react";
 import AccueilAdmin from './admin/AccueilAdmin';
 import AccueilClients from './clients/AccueilClients';
 import Chambres from './clients/Chambres';
+import Reserver from './clients/Reserver';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -105,6 +106,7 @@ function App() {
         <Route path="/clients" element={<AccueilClients />} />
         <Route path="/admin" element={<AccueilAdmin />} />
         <Route path="/clients/chambres" element={<Chambres />} />
+        <Route path="/clients/reserver" element={<Reserver />} />
         {/* <Route path="/clients/" element={<AccueilClients />} /> */}
         {/* autres routes */}
       </Routes>
