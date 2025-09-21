@@ -75,11 +75,11 @@ const Footer = ({
 
           {/* Copyright */}
           <div className="footer-bottom">
-            <p>&copy; {new Date().getFullYear()} {hotelName}. Tous droits réservés.</p>
+            <p>&copy; 2025 {hotelName}. Tous droits réservés.</p>
           </div>
         </div>
       </footer>
-       </>
+    </>
   );
 };
 

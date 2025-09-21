@@ -3,8 +3,10 @@ import './App.css';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import { Building, Users, Waves, MapPin, Phone, Mail } from "lucide-react"
-import AccueilClients from './clients/AccueilClients.js';
+import { Building, Users, Waves, MapPin, Phone, Mail } from "lucide-react";
+import AccueilAdmin from './admin/AccueilAdmin';
+import AccueilClients from './clients/AccueilClients';
+import Chambres from './clients/Chambres';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -52,7 +54,11 @@ function Home() {
                 Gérez les réservations, les chambres et les clients 
                 de votre hôtel avec notre interface intuitive.
               </p>
-              <button className="btn btn-admin">Accès gestionnaire</button>
+              {/* <button className="btn btn-admin">Accès gestionnaire</button> */}
+
+              <Link to="/admin" className="btn btn-admin">
+                Accès gestionnaire
+              </Link>
             </div>
           </div>
         </div>
@@ -97,6 +103,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/clients" element={<AccueilClients />} />
+        <Route path="/admin" element={<AccueilAdmin />} />
+        <Route path="/clients/chambres" element={<Chambres />} />
         {/* <Route path="/clients/" element={<AccueilClients />} /> */}
         {/* autres routes */}
       </Routes>

@@ -5,16 +5,29 @@ import {
   MapPin, Phone, Mail 
 } from "lucide-react";
 
+import Header from '../Components/Header.js';
+import Footer from '../Components/Footer.js';
+
 const AccueilClients = () => {
+
+  const [activeTab, setActiveTab] = React.useState('accueil');
+
+  const handleTabClick = (tabId) => {
+    setActiveTab(tabId);
+  };
+
+  const handleBackClick = () => {
+    console.log('Retour cliqué');
+  };
+
   return (
     <div className="min-vh-100">
       {/* Header */}
-      <header className="header-sticky bg-light bg-gradient shadow-sm">
+      {/* <header className="header-sticky bg-light bg-gradient shadow-sm">
         <div className="container-fluid">
           <div className="row align-items-center py-3">
             <div className="col-md-4">
               <div className="d-flex align-items-center gap-3">
-                {/* Button retour */}
                 <button className="btn btn-ghost">
                   <ArrowLeft size={16} className="me-2" />
                   Retour
@@ -35,7 +48,19 @@ const AccueilClients = () => {
             </div>
           </div>
         </div>
-      </header>
+      </header> */}
+      <Header
+          showBackButton={true}
+          activeTab={activeTab}
+          onBackClick={handleBackClick}
+          onTabClick={handleTabClick}
+          tabs={[
+            { id: 'accueil', label: 'Accueil', to: '/clients' },
+            { id: 'chambres', label: 'Nos Chambres', to: '/clients/chambres' },
+            { id: 'reserver', label: 'Réserver', to: '/clients/reserver' },
+            { id: 'compte', label: 'Mon Compte', to: '/clients/compte' }
+          ]}
+        />
 
       {/* Hero Section with Real Hotel Room Image */}
       <div className="hero-section">
@@ -276,50 +301,8 @@ const AccueilClients = () => {
       </div>
 
       {/* Footer */}
-      <footer className="footer">
-        <div className="container">
-          <div className="row g-4">
-            <div className="col-lg-4">
-              <div className="d-flex align-items-center gap-2 mb-3">
-                <Waves size={32} className="text-cyan" />
-                <h3 className="h4 mb-0 text-white">Vue Sur Mer</h3>
-              </div>
-              <p className="footer-description">
-                Votre hôtel de luxe face à la Méditerranée. Une expérience inoubliable vous attend.
-              </p>
-            </div>
-            <div className="col-lg-4">
-              <h4 className="footer-title">Contact</h4>
-              <div className="footer-contacts">
-                <div className="footer-contact">
-                  <MapPin size={16} />
-                  <span>123 Boulevard de la Mer, 06000 Nice</span>
-                </div>
-                <div className="footer-contact">
-                  <Phone size={16} />
-                  <span>+33 4 93 00 00 00</span>
-                </div>
-                <div className="footer-contact">
-                  <Mail size={16} />
-                  <span>contact@vuesurmer.fr</span>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-4">
-              <h4 className="footer-title">Liens Rapides</h4>
-              <div className="footer-links">
-                <a href="/chambres">Nos Chambres</a>
-                <a href="/reservation">Réserver</a>
-                <a href="/profil">Mon Compte</a>
-              </div>
-            </div>
-          </div>
-          <div className="footer-bottom">
-            <p>&copy; 2025 Vue Sur Mer. Tous droits réservés.</p>
-          </div>
-        </div>
-      </footer>
-        </div>
+      <Footer/>
+    </div>
   );
 };
 
