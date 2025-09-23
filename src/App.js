@@ -8,6 +8,8 @@ import AccueilAdmin from './admin/AccueilAdmin';
 import AccueilClients from './clients/AccueilClients';
 import Chambres from './clients/Chambres';
 import Reserver from './clients/Reserver';
+import Compte from './clients/Compte';
+import AdminChambres from './admin/AdminChambres';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -104,10 +106,16 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/clients" element={<AccueilClients />} />
-        <Route path="/admin" element={<AccueilAdmin />} />
         <Route path="/clients/chambres" element={<Chambres />} />
         <Route path="/clients/reserver" element={<Reserver />} />
+        <Route path="/clients/reserver" element={<Reserver />} />
+        <Route path="/clients/compte" element={<Compte />} />
+
+        <Route path="/admin" element={<AccueilAdmin />} />
+        <Route path="/admin/chambres" element={<AdminChambres />} />
         {/* <Route path="/clients/" element={<AccueilClients />} /> */}
+        {/* <Route path="/clients/" element={<AccueilClients />} 
+        <Route path="/clients/compte" element={<Compte />} />/> */}
         {/* autres routes */}
       </Routes>
     </Router>

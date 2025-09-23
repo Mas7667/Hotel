@@ -166,10 +166,10 @@ const AccueilAdmin = () => {
         onBackClick={handleBackClick}
         onTabClick={handleTabClick}
         tabs={[
-          { id: 'dashboard', label: 'Tableau de bord' },
-          { id: 'rooms', label: 'Chambres' },
-          { id: 'clients', label: 'Clients' },
-          { id: 'reservations', label: 'Réservations' }
+          { id: 'dashboard', label: 'Tableau de bord', to: '/admin' },
+          { id: 'rooms', label: 'Chambres', to: '/admin/chambres' },
+          { id: 'clients', label: 'Clients', to: '/admin/clients' },
+          { id: 'reservations', label: 'Réservations', to: '/admin/reservations' }
         ]}
       />
 
